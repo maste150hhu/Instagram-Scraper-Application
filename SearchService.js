@@ -1,6 +1,6 @@
 class SearchService {
 
-    constructor(version) {
-        this.version = version;
+    constructor(debuggingService) {
+        console.log(this.constructor.name + " initialized");
     }
 }

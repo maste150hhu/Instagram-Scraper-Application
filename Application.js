@@ -3,10 +3,11 @@ class Application {
     constructor() {
         this.version = "1.0";
         this.name = "𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶 𝓢𝓬𝓻𝓪𝓹𝓮𝓻 𝓐𝓹𝓹𝓵𝓲𝓬𝓪𝓽𝓲𝓸𝓷";
-        this.searchService = new SearchService(this.version);
-        this.jsonService = new JsonService(this.version);
-        this.eventService = new this.eventService(this.version);
-        console.log(this.version);
+        this.debuggingService = new DebuggingService(this.debuggingService);
+        this.searchService = new SearchService(this.debuggingService);
+        this.jsonService = new JsonService(this.debuggingService);
+        this.eventService = new EventService(this.debuggingService);
+        console.log("Version: " + this.version);
         console.log(this.name);
 
         this.createNavBar("start", this.name + " " + this.version);
@@ -69,18 +70,3 @@ class Application {
 
 let application  = new Application();
 let inputfield = document.getElementById("inputfield");
-
-// Add EventListeners. May move those into their own Service in the future.
-$("#inputfield").keypress(function (e) { 
-    if(e.keyCode === 13) {
-        application.showResults();
-    }
-});
-
-$("#search").click(function() {
-    application.showResults();
-});
-
-$(".card").hover(function() {
-    
-});
