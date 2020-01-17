@@ -1,6 +1,7 @@
 class DebuggingService {
 
-    constructor(debuggingService) {
+    constructor(version) {
+        this.version = version;
         console.log(this.constructor.name + " initialized");
     }
 }
