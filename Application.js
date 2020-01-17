@@ -5,6 +5,7 @@ class Application {
         this.name = "𝓘𝓷𝓼𝓽𝓪𝓰𝓻𝓪𝓶 𝓢𝓬𝓻𝓪𝓹𝓮𝓻 𝓐𝓹𝓹𝓵𝓲𝓬𝓪𝓽𝓲𝓸𝓷";
         this.searchService = new SearchService(this.version);
         this.jsonService = new JsonService(this.version);
+        this.eventService = new this.eventService(this.version);
         console.log(this.version);
         console.log(this.name);
 
