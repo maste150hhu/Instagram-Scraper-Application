@@ -1,20 +1,24 @@
 class EventService {
 
-    constructor(debuggingService) {
+    constructor(debuggingService, searchService) {
         console.log(this.constructor.name + " initialized");
+
+        this.searchService = this.searchService;
         // Add EventListeners. May move those into their own Service in the future.
         $("#inputfield").keypress(function (e) {
             if (e.keyCode === 13) {
-                application.showResults();
+                searchService.showResults();
             }
         });
 
         $("#search").click(function () {
-            application.showResults();
+            searchService.showResults();
         });
 
         $(".card").hover(function () {
 
         });
     }
+
+    
 }
