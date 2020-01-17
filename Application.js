@@ -27,6 +27,7 @@ class Application {
         nav.style.borderBottom = "1px solid black";
 
         document.getElementById(location).append(nav);
+        document.getElementById("results").append(document.createElement("hr"));
     }
 
     generateFrames(count, query) {
@@ -40,7 +41,6 @@ class Application {
             card.innerHTML = query[i];
             card.className = "card";
             card.margin = "20px";
-            //card.style.float = "left";
             card.style.textAlign = "center";
             card.style.display = "flex";
             card.style.border = "1px solid lightgray";
@@ -49,21 +49,34 @@ class Application {
         }
     }
 
+    clearResults() {
+        let cards = document.getElementsByClassName("card");
+    }
+
     showResults() {
-        document.getElementById("results").append(document.createElement("hr"));
-        var query = new Array(20);
+        this.clearResults();
+        var query = new Array(5);
+        let input = inputfield.value;
         for(let i = 0; i < query.length; i++) {
-            query[i] = "maste" + Math.round(Math.random() * 200);
+            query[i] = input + Math.round(Math.random() * 200);
         }
         this.generateFrames(query.length, query);
     }
 }
 
+// This is the place where the actual Application-Code starts:
+
 let application  = new Application();
 let inputfield = document.getElementById("inputfield");
 
+// Add EventListeners. May move those into their own Service in the future.
+$("#inputfield").keypress(function (e) { 
+    if(e.keyCode === 13) {
+        application.showResults();
+    }
+});
+
 $("#search").click(function() {
-    inputfield.value = "";
     application.showResults();
 });
 
