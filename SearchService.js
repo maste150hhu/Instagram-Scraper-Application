@@ -38,8 +38,9 @@ class SearchService {
         let resultsLocation  = document.getElementById("results");
 
         for(let i = 0; i < count; i++) {
-            let card = document.createElement("div");
+            let card = document.createElement("a");
             card.innerHTML = query[i];
+            card.href = "bestofcode.net";
             card.className = "card";
             card.margin = "20px";
             card.style.textAlign = "center";
