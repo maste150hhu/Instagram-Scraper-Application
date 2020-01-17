@@ -5,11 +5,25 @@ class SearchService {
     }
 
     clearResults() {
-        let cards = document.getElementsByClassName("card");
+        while(document.getElementsByClassName("card").length != 0){
+            // try to remove them
+
+            let cards = document.getElementsByClassName("card");
+            for(let i = 0; i < cards.length; i++) {
+                cards[i].remove();
+            }
+        }
+        
     }
 
     showResults() {
-        this.clearResults();
+        // while there are still search results in the document
+        //while(document.getElementsByClassName("card").length != 0){
+            // try to remove them
+            this.clearResults();
+        //}
+
+        // all results were finally removed. Now we can generate new ones
         var query = new Array(5);
         let input = inputfield.value;
         for(let i = 0; i < query.length; i++) {
@@ -18,12 +32,11 @@ class SearchService {
         this.generateFrames(query.length, query);
     }
 
+    // This is the method to generate random <div> elements with class="card"
     generateFrames(count, query) {
+        // create an element of the type <div>
         let resultsLocation  = document.getElementById("results");
-        resultsLocation.style.textAlign = "center";
-        resultsLocation.style.margin = "auto";
-        resultsLocation.style.width = "60%";
-        resultsLocation.style.display = "flex-box";
+
         for(let i = 0; i < count; i++) {
             let card = document.createElement("div");
             card.innerHTML = query[i];
