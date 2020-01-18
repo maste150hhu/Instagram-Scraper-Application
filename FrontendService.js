@@ -16,8 +16,9 @@ class FrontendService {
 
         // Apply styles to the document's body
         document.body.style.padding = "8px 8px 16px 8px";
-        document.body.style.margin = "none";
+        document.body.style.margin = "auto";
         document.body.style.textAlign = "center";
+        document.body.style.width = "60%";
         document.body.style.fontSize = "2rem";
     }
 

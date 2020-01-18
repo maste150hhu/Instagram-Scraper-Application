@@ -32,11 +32,16 @@ class EventService {
         });
 
         $("#search").click(function () {
-            searchService.showResults();
+            if(this.value.length > 0){
+
+                searchService.showResults();
+            }
         });
 
         $(".card").hover(function () {
-
+            $(this).addClass("hover");
+        }, function() {
+            $(this).removeClass("hover");
         });
     }
 
