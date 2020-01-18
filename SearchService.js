@@ -4,7 +4,7 @@ class SearchService {
         this.jsonService = jsonService;
         console.log(this.constructor.name + " initialized");
 
-        console.log(this.jsonService.receiveProfile("marc0ste"));
+        console.log(this.jsonService.getUserProfile("marc0ste"));
     }
 
     // This method clears the results displayed in the browser.

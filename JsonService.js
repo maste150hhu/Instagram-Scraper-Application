@@ -4,6 +4,13 @@ class JsonService {
         console.log(this.constructor.name + " initialized");
     }
 
+    getUserProfile(username) {
+        var promise = this.receiveProfile(username);
+        var userProfile = promise.then(function(profile) {
+            console.log(profile);
+        });
+    }
+
     receiveProfile(username) {
         var url = "https://www.instagram.com/" + username + "/?__a=1";
 
