@@ -2,8 +2,6 @@ class JsonService {
 
     constructor(debuggingService) {
         console.log(this.constructor.name + " initialized");
-        this.userobject = this.receiveProfile("marc0ste");
-        console.log(this.userobject);
     }
 
     receiveProfile(username) {
@@ -11,11 +9,11 @@ class JsonService {
 
         var resultObject;
 
-        fetch(url).then(function (response) {
+        return fetch(url).then(function (response) {
             return response.json();
         }).then(function (data) {
 
-            resultObject = new UserProfile(
+            return resultObject = new UserProfile(
                 data.graphql.user.full_name,
                 data.graphql.user.biography,
                 data.graphql.user.profile_pic_url,
@@ -25,11 +23,10 @@ class JsonService {
                 data.graphql.user.edge_follow
             );
 
-            return resultObject;
         }).catch(function () {
             console.log("Booo");
         });
-
+        
         return resultObject;
     }
 }

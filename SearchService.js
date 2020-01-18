@@ -4,7 +4,7 @@ class SearchService {
         this.jsonService = jsonService;
         console.log(this.constructor.name + " initialized");
 
-        console.log(this.jsonService.userobject);
+        console.log(this.jsonService.receiveProfile("marc0ste"));
     }
 
     clearResults() {
