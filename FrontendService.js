@@ -24,6 +24,7 @@ class FrontendService {
     // Use this method to generate the Application Navigation
     createNavBar(location, text) {
         let nav = document.createElement("div");
+        nav.style.textAlign = "center";
         nav.innerHTML = text;
         nav.className = "nav";
         nav.style.width = "100%";
