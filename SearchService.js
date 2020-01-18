@@ -7,6 +7,13 @@ class SearchService {
         console.log(this.jsonService.receiveProfile("marc0ste"));
     }
 
+    // This method clears the results displayed in the browser.
+    // This implementation can be argued because it modifies 
+    // the frontend and should be placed in the FrontendService
+    // But this would cause the SearchService to have an 
+    // dependency on the FrontendService and I would break
+    // Single Responsibility Principle and I would also break
+    // my encapsulation
     clearResults() {
         while(document.getElementsByClassName("card").length != 0){
             // try to remove them
