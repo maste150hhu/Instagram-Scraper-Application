@@ -31,9 +31,12 @@ class FrontendService {
         nav.className = "nav";
         nav.style.width = "100%";
         nav.style.color = "lightskyblue";
-        nav.style.borderBottom = "1px solid black";
+        nav.style.borderBottom = "1px solid lightskyblue";
 
         document.getElementById(location).append(nav);
-        document.getElementById("results").append(document.createElement("hr"));
+
+        let hr = document.createElement("hr");
+        hr.style.borderBottom = "1px solid lightskyblue";
+        document.getElementById("results").append(hr);
     }
 }

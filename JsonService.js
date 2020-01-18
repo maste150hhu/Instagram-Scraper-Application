@@ -3,6 +3,7 @@ class JsonService {
     constructor(debuggingService) {
         console.log(this.constructor.name + " initialized");
         this.userobject = this.receiveProfile("marc0ste");
+        console.log(this.userobject);
     }
 
     receiveProfile(username) {
