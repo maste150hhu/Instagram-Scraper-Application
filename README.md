@@ -13,6 +13,8 @@ for me to receive an access token to use their API, I did
 some research and found programmers who reverse-engineered
 the API which resulted in myself trying to do so too.
 
+![](https://i.imgur.com/eCS4Y5j.png)
+
 ## TODO
 + add animations for the search results
 + add profile pictures for search results
