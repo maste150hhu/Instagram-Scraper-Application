@@ -39,9 +39,7 @@ class EventService {
         });
 
         $(".card").hover(function () {
-            $(this).addClass("hover");
-        }, function() {
-            $(this).removeClass("hover");
+            $(this).style.borderColor = "lightskyblue";
         });
     }
 

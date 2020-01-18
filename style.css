@@ -5,3 +5,18 @@ nav {
     font-size: 2rem;
     border-bottom: 2px solid black;
 }
+
+* {
+    color: lightskyblue;
+}
+
+.card:hover {
+    background: rgb(240,240,240);
+    border-color: lightskyblue;
+    transition-duration: 0.3s;
+}
+
+.card {
+    transition-duration: 0.3s;
+}
+

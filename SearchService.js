@@ -75,8 +75,10 @@ class SearchService {
             card.margin = "20px";
             card.style.textAlign = "center";
             card.style.display = "flex";
-            card.style.border = "1px solid lightgray";
+            card.style.border = "1px solid lightskyblue";
             card.style.borderRadius = "5px";
+            card.style.background = "#243B55";
+            card.style.boxShadow = "0px 1px 3px 1px rgb(60,60,60)";
             resultsLocation.append(card);
         }
     }

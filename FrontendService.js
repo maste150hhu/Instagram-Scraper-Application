@@ -17,6 +17,7 @@ class FrontendService {
         // Apply styles to the document's body
         document.body.style.padding = "8px 8px 16px 8px";
         document.body.style.margin = "auto";
+        document.body.style.background = "linear-gradient(to right,#243B55,#141E30)";
         document.body.style.textAlign = "center";
         document.body.style.width = "60%";
         document.body.style.fontSize = "2rem";
@@ -29,6 +30,7 @@ class FrontendService {
         nav.innerHTML = text;
         nav.className = "nav";
         nav.style.width = "100%";
+        nav.style.color = "lightskyblue";
         nav.style.borderBottom = "1px solid black";
 
         document.getElementById(location).append(nav);
