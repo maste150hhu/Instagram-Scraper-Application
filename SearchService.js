@@ -4,8 +4,24 @@ class SearchService {
         this.jsonService = jsonService;
         console.log(this.constructor.name + " initialized");
         var x = this.jsonService.getUserProfile("marc0ste");
-        console.log(x);
-        console.log(this.jsonService.getUserProfile("marc0ste"));
+        console.log(this.parsePromiseIntoUserProfile(x));
+        //this.jsonService.printUserProfile(x); 
+    }
+
+    parsePromiseIntoUserProfile(promise) {
+
+        var profile;
+        return promise.then(profile => {
+            profile = new UserProfile(
+                profile.username,
+                profile.biography,
+                profile.profilepicture,
+                profile.url,
+                profile.posts,
+                profile.followedBy,
+                profile.follow
+            );
+         });
     }
 
     // This method clears the results displayed in the browser.
