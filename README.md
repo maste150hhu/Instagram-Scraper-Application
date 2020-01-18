@@ -18,3 +18,5 @@ the API which resulted in myself trying to do so too.
 ## TODO
 + add animations for the search results
 + add profile pictures for search results
++ write subproject "Scraper" which offers a lot of tools to
+  parse Instagram Profile Objects
