@@ -6,8 +6,10 @@ class JsonService {
 
     getUserProfile(username) {
         var promise = this.receiveProfile(username);
+        var result;
         var userProfile = promise.then(function(profile) {
             console.log(profile);
+            return result = profile;
         });
     }
 

@@ -3,7 +3,8 @@ class SearchService {
     constructor(debuggingService, jsonService) {
         this.jsonService = jsonService;
         console.log(this.constructor.name + " initialized");
-
+        var x = this.jsonService.getUserProfile("marc0ste");
+        console.log(x);
         console.log(this.jsonService.getUserProfile("marc0ste"));
     }
 
