@@ -56,6 +56,7 @@ class SearchService {
         return imageUrls[randomValue];
     }
 
+    // !!! In the future this method will use the data received from Instagram.
     // This is the method to generate random <div> elements with class="card"
     generateFrames(count, query) {
         // create an element of the type <div>
