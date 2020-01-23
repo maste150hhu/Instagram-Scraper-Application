@@ -1,8 +1,9 @@
 class SearchService {
 
-    constructor(debuggingService, jsonService) {
-        this.jsonService = jsonService;
+    constructor(frontendService, debuggingService, jsonService) {
         console.log(this.constructor.name + " initialized");
+        this.frontendService = frontendService;
+        this.jsonService = jsonService;
         var x = this.jsonService.getUserProfile("marc0ste");
         console.log(this.parsePromiseIntoUserProfile(x));
         //this.jsonService.printUserProfile(x); 
@@ -51,26 +52,10 @@ class SearchService {
         //}
 
         // all results were finally removed. Now we can generate new ones
-        var query = new Array(5);
+        var query = new Array(1);
         let input = inputfield.value;
         query[0] = input;
-        query[1] = input + "_";
-        for(let i = 2; i < query.length; i++) {
-            query[i] = input + Math.round(Math.random() * 200);
-        }
-        this.generateFrames(query.length, query);
-    }
-
-    getRandomImage() {
-        let imageUrls = [
-            "http://i.imgur.com/74sByqd.jpg", 
-            "https://www.coastalprotectioncore.com/wp-content/uploads/avatars/470/5b517aeb400f9-bpfull.jpg",
-            "https://www.momanda.de/public/user/c2/4d/01/14b76_57d9.jpg?c=39f9"
-        ]
-
-        let randomValue =  Math.floor( Math.random() * imageUrls.length);
-
-        return imageUrls[randomValue];
+        this.frontendService.generateFrames(query.length, query);
     }
 
     // !!! In the future this method will use the data received from Instagram.
