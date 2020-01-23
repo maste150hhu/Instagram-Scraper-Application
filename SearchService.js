@@ -5,8 +5,7 @@ class SearchService {
         this.frontendService = frontendService;
         this.jsonService = jsonService;
         var x = this.jsonService.getUserProfile("marc0ste");
-        console.log(this.parsePromiseIntoUserProfile(x));
-        //this.jsonService.printUserProfile(x); 
+        console.log(x);
     }
 
     parsePromiseIntoUserProfile(promise) {
