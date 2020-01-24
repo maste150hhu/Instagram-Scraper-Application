@@ -19,6 +19,7 @@ class JsonService {
             console.log(profile);
          });
     }
+    
 
     receiveProfile(username) {
         var url = "https://www.instagram.com/" + username + "/?__a=1";
