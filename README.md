@@ -13,7 +13,7 @@ for me to receive an access token to use their API, I did
 some research and found programmers who reverse-engineered
 the API which resulted in myself trying to do so too.
 
-![](https://i.imgur.com/fIN1v1N.png = 250x250)
+<img style="margin: auto;" src="https://i.imgur.com/fIN1v1N.png" alt="" width="500" height="500"/>
 
 ## TODO
 + add animations for the search results
